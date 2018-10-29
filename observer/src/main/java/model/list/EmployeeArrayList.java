@@ -32,32 +32,6 @@ public class EmployeeArrayList extends ArrayList<Employee> implements EmployeeCo
         );
     }
 
-    private BigDecimal takeMinSalary() {
-        ListIterator<Employee> it = this.listIterator();
-        BigDecimal minSalary = null;
-        BigDecimal curSalary;
-        while(it.hasNext()) {
-            curSalary = it.next().getSalary();
-            if (minSalary == null || minSalary.compareTo(curSalary) > 0) {
-                minSalary = curSalary;
-            }
-        }
-        return minSalary;
-    }
-
-    private BigDecimal takeMaxSalary() {
-        ListIterator<Employee> it = this.listIterator();
-        BigDecimal maxSalary = null;
-        BigDecimal curSalary;
-        while(it.hasNext()) {
-            curSalary = it.next().getSalary();
-            if (maxSalary == null || maxSalary.compareTo(curSalary) < 0) {
-                maxSalary = curSalary;
-            }
-        }
-        return maxSalary;
-    }
-
     @Override
     public void deleteEmployeesOlderThan(int age) {
         this.removeIf(
@@ -109,12 +83,39 @@ public class EmployeeArrayList extends ArrayList<Employee> implements EmployeeCo
     }
 
     @Override
+    public void sortByDepartmentBySalary() {
+        this.sort(new ComparatorByDepartmentBySalary());
+    }
+
+    // добавить "_1" к имени каждого элементу первой коллекции
     public void addToAllEmployeesName(int offset, String s) {
         this.forEach(e -> e.addToName(offset, s));
     }
 
-    @Override
-    public void sortByDepartmentBySalary() {
-        this.sort(new ComparatorByDepartmentBySalary());
+    private BigDecimal takeMinSalary() {
+        ListIterator<Employee> it = this.listIterator();
+        BigDecimal minSalary = null;
+        BigDecimal curSalary;
+        while(it.hasNext()) {
+            curSalary = it.next().getSalary();
+            if (minSalary == null || minSalary.compareTo(curSalary) > 0) {
+                minSalary = curSalary;
+            }
+        }
+        return minSalary;
+    }
+
+    private BigDecimal takeMaxSalary() {
+        ListIterator<Employee> it = this.listIterator();
+        BigDecimal maxSalary = null;
+        BigDecimal curSalary;
+        while(it.hasNext()) {
+            curSalary = it.next().getSalary();
+            if (maxSalary == null || maxSalary.compareTo(curSalary) < 0) {
+                maxSalary = curSalary;
+            }
+        }
+        return maxSalary;
     }
 }
+

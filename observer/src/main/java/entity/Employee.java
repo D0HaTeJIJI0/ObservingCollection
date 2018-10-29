@@ -2,7 +2,7 @@ package entity;
 
 import java.math.BigDecimal;
 
-public class Employee {
+public class Employee implements Comparable<Employee>{
     private StringBuffer name;
     private Department department;
     private BigDecimal salary;
@@ -42,5 +42,13 @@ public class Employee {
 
     public void addToName(int offset, String s) {
         name.insert(offset, s);
+    }
+
+    @Override
+    public int compareTo(Employee o) {
+        if (this.getDepartment() == o.getDepartment()) {
+            return this.getSalary().compareTo(o.getSalary());
+        }
+        return this.getDepartment().compareTo(o.getDepartment());
     }
 }

@@ -44,7 +44,6 @@ public class Demo {
         employeeLinkedHashMap.takeEmployees(2, 2);
         employeeLinkedHashMap.takeEmployeesFromDepartment(Department.TESTING);
         employeeLinkedHashMap.isEmployeesHasCharacterInName('c');
-        employeeLinkedHashMap.addToAllEmployeesName(0,"_1");
         employeeLinkedHashMap.sortByDepartmentBySalary();
     }
 
