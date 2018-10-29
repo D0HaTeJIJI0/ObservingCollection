@@ -6,14 +6,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="CollectionNoStream" />
-        <module name="CollectionStream" />
+        <module name="collectionobserver" />
+        <module name="observer" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="CollectionNoStream" target="1.8" />
+      <module name="_123" target="1.8" />
+      <module name="collection-observer" target="1.8" />
+      <module name="collectionobserver" target="1.8" />
       <module name="CollectionStream" target="1.8" />
       <module name="NC_Tasks" target="1.8" />
+      <module name="observer" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

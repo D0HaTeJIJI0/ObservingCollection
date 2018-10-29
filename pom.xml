@@ -17,8 +17,8 @@
         </plugins>
     </build>
     <modules>
-        <module>CollectionStream</module>
-        <module>CollectionNoStream</module>
+        <module>observer</module>
+
     </modules>
 
     <modelVersion>4.0.0</modelVersion>
