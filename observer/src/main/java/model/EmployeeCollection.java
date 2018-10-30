@@ -18,9 +18,9 @@ public interface EmployeeCollection {
     //  вернуть третий элемент коллекции по порядку
     Employee takeEmployeeByIndex(int i);
     // вернуть два элемента начиная со второго
-    Collection<Employee> takeEmployees(int fromIndex, int amount);
+    Collection takeEmployees(int fromIndex, int amount);
     // выбрать все элементы по шаблону
-    Collection<Employee> takeEmployeesFromDepartment(Department department);
+    Collection takeEmployeesFromDepartment(Department department);
     // найти есть ли символ «{любой символ}» у всех элементов коллекции
     boolean isEmployeesHasCharacterInName(char c);
     // отсортировать коллекцию элементов сначала по одному полю, а потом по второму

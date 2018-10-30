@@ -21,6 +21,14 @@ public class EmployeeArrayListStream implements EmployeeCollection {
         this.employeeList = employeeList;
     }
 
+    public List<Employee> getEmployeeList() {
+        return employeeList;
+    }
+
+    public void setEmployeeList(List<Employee> employeeList) {
+        this.employeeList = new ArrayList<>(employeeList);
+    }
+
     @Override
     public void deleteEmployeesWithMaxSalary() throws EmptyCollectionException {
         BigDecimal maxSalary = this.employeeList.stream()
